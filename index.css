@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box !important;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 100%;
+}
+header {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  width: 70px;
+}
+nav {
+  display: flex;
+}
+nav a {
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #060606;
+  opacity: 0.5;
+}
+.contact {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #060606;
+  opacity: 0.5;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-content {
+  display: flex;
+  margin-top: 5%;
+}
+.main-text {
+  width: 50%;
+}
+main p {
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #060606;
+  opacity: 0.6;
+}
+
+.main-text h1 {
+  text-transform: uppercase;
+  margin: 7% 0 3% 2%;
+  font-weight: 900;
+  font-size: 5em;
+  color: red;
+  word-spacing: 2;
+}
+
+.text {
+  margin: 4.5% 0 0 2%;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 19px;
+  opacity: 0.5;
+}
+main .btn1 {
+  margin: 8% 0 0 2%;
+  padding: 2% 4% 2% 4%;
+  border-radius: 50px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: red;
+  border: none;
+  color: #fff;
+  outline: none;
+}
+main .btn2 {
+  margin: 8% 0 0 2%;
+  padding: 2% 4.5% 2% 4.5%;
+  border-radius: 50px;
+  outline: none;
+  font-size: 1rem;
+  text-transform: lowercase;
+  color: #060606;
+  opacity: 0.5;
+  border: 2px solid red;
+}
+
+.main-img {
+  
+  width: 90%;
+  padding: 2% 0 0 0;
+}
+.shoe-img {
+  transform: rotate(-16deg);
+  width: 80%;
+  height: 500px;
+}
+.shoes {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4%;
+}
+section h1 {
+  text-align: center;
+  color: #060606;
+  opacity: 0.5;
+}
+.shoes div {
+  width: 500px;
+  height: 300px;
+  background-color: #e4e4e4;
+  margin: 5px;
+  padding: 3% 1% 0 2%;
+  border-radius: 20px;
+  box-shadow: 31px 31px 46px #a0a0a0, -31px -31px 46px #ffffff;
+}
+
+.shoes img {
+  width: 20em;
+}
+.shoes div:hover {
+  background: rgb(112, 107, 107);
+  background: linear-gradient(
+    180deg,
+    rgba(112, 107, 107, 1) 6%,
+    rgba(162, 159, 159, 1) 34%,
+    rgba(255, 255, 255, 1) 93%
+  );
+}
+article {
+  background: rgb(228, 228, 228);
+  background: linear-gradient(
+    357deg,
+    rgba(228, 228, 228, 1) 36%,
+    rgba(255, 255, 255, 1) 78%
+  );
+  padding: 3% 8% 0 10%;
+  margin-bottom: 10%;
+}
+.watermark {
+  font-size: 11em;
+  font-weight: 900;
+  color: #060606;
+  opacity: 0.1;
+  position: relative;
+  bottom: 25%;
+  word-spacing: 5;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+  .watermark {
+    font-size: 7rem;
+    font-weight: 700;
+  }
+  .main-text h1{
+    line-height:1;
+  }
+  .text{
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .shoe-img,.main-img {
+    width:0;
+    height: 0;
+    display: none;
+    transform:none
+  }.main-text{
+    margin:auto;
+    line-height: 4;
+  }
+  
+  .watermark {
+    font-size: 3.5rem;
+    font-weight: 100;
+    position: relative;
+    top:0.1px;
+  }
+}
+@media(max-width:640px){
+  .contact{
+    display: none;
+    width: 100%;
+  }
+  .main-text h1{
+    font-size:3.5em ;
+  }
+  main .btn1{
+    display: inline;
+  }
+}
+@media(max-width:550px){
+  
+  header{
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+  
+  }
+
+  nav a{
+    margin-left:5px;
+    font-size: 0.5rem;
+  
+  }
+  .main-text h1{
+    font-size: 30px;
+  }
+  .main-text{
+    line-height: 4;
+  }
+
+}
