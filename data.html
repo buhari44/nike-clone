@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            display:flex;
+            align-items: center;
+             justify-content: center; 
+        }
+        .invisible{
+            background-color: red;
+            font-size:20px;
+            font-weight: 400;
+        }
+        .input-group,button{
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: 400;
+            cursor: pointer;
+
+        }
+        .input-group input{
+            padding:10px;
+
+        }
+        .shoe .price,.desc{
+            font-size: 20px;
+            font-weight: 800;
+            background-color: red;
+            color: aliceblue;
+            width: 20%;
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <form>
+        <div class="shoe">
+        <div class="section1 section">
+            <img src="">
+            <div class="col">
+                <div class="price"></div>
+                <div class="desc"></div>
+                </div>
+                </div>
+        </div>
+    <div class="input-group">
+        <div><label for="firstname">firstname</label></div>
+        <input type="text" id="firstname" name="firstname">
+    </div>
+    
+    <div class="input-group">
+        <div><label for="lastname">lastname</label></div>
+        <input type="text" id="lastname" name="lastname">
+    </div>
+    <div class="input-group">
+        <div><label for="address">address:</label></div>
+        <input type="text" id="address" name="address">
+    </div>
+    <button type="submit">submit</button>
+    <button type="reset">reset</button>
+   
+    </form>
+</body>
+<script>
+    const order=localStorage.getItem("order");
+    console.log(order);
+if(order){
+    const myorder=JSON.parse(order);
+    const section=document.querySelector(".shoe")
+    const sections=document.querySelector(".section")
+   
+   const price= section.querySelector(".price")
+   const desc = section.querySelector(".desc");
+
+   price.innerHTML=myorder.price
+   desc.innerHTML=myorder.desc;
+
+   const img=section.querySelector("img");
+   img.setAttribute("src",`img-collection/${myorder.id}.png`);
+   img.style.height="30vh";
+   img.style.width="30%";
+
+
+
+}
+// const btn =document.querySelector("button[type]").addEventListener("click",function(e){
+// const parent=btn.parentElement
+// const usersInfos={
+//     firstname:parent.querySelector("#firstname").innerHTML
+// }
+// localStorage.getItem("usersInfos",JSON.stringify(usersInfos))
+// })
+</script>
+</html>
